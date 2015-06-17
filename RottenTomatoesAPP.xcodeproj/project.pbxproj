@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		D40971D31B31F2D20049ACFC /* noun_cd_160278.png in Resources */ = {isa = PBXBuildFile; fileRef = D40971D21B31F2D20049ACFC /* noun_cd_160278.png */; };
 		D40971D51B31F3190049ACFC /* noun_cinema_313.png in Resources */ = {isa = PBXBuildFile; fileRef = D40971D41B31F3190049ACFC /* noun_cinema_313.png */; };
+		D40971DA1B31FB7B0049ACFC /* noun_cinema_313@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D40971D61B31FB7B0049ACFC /* noun_cinema_313@2x.png */; };
+		D40971DB1B31FB7B0049ACFC /* noun_cinema_313@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D40971D71B31FB7B0049ACFC /* noun_cinema_313@3x.png */; };
+		D40971DC1B31FB7B0049ACFC /* noun_error_89100@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D40971D81B31FB7B0049ACFC /* noun_error_89100@2x.png */; };
+		D40971DD1B31FB7B0049ACFC /* noun_error_89100@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D40971D91B31FB7B0049ACFC /* noun_error_89100@3x.png */; };
 		D47B7E911B2D8408008F1FD8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D47B7E901B2D8408008F1FD8 /* main.m */; };
 		D47B7E941B2D8408008F1FD8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D47B7E931B2D8408008F1FD8 /* AppDelegate.m */; };
 		D47B7E971B2D8408008F1FD8 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D47B7E961B2D8408008F1FD8 /* DetailViewController.m */; };
@@ -41,6 +45,10 @@
 		BBFE91CAD63DB0D0ECEE5521 /* Pods-RottenTomatoesAPP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RottenTomatoesAPP.release.xcconfig"; path = "Pods/Target Support Files/Pods-RottenTomatoesAPP/Pods-RottenTomatoesAPP.release.xcconfig"; sourceTree = "<group>"; };
 		D40971D21B31F2D20049ACFC /* noun_cd_160278.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = noun_cd_160278.png; sourceTree = "<group>"; };
 		D40971D41B31F3190049ACFC /* noun_cinema_313.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = noun_cinema_313.png; sourceTree = "<group>"; };
+		D40971D61B31FB7B0049ACFC /* noun_cinema_313@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "noun_cinema_313@2x.png"; sourceTree = "<group>"; };
+		D40971D71B31FB7B0049ACFC /* noun_cinema_313@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "noun_cinema_313@3x.png"; sourceTree = "<group>"; };
+		D40971D81B31FB7B0049ACFC /* noun_error_89100@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "noun_error_89100@2x.png"; sourceTree = "<group>"; };
+		D40971D91B31FB7B0049ACFC /* noun_error_89100@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "noun_error_89100@3x.png"; sourceTree = "<group>"; };
 		D47B7E8B1B2D8407008F1FD8 /* RottenTomatoesAPP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RottenTomatoesAPP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D47B7E8F1B2D8408008F1FD8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D47B7E901B2D8408008F1FD8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -145,6 +153,10 @@
 		D47B7E8E1B2D8407008F1FD8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D40971D61B31FB7B0049ACFC /* noun_cinema_313@2x.png */,
+				D40971D71B31FB7B0049ACFC /* noun_cinema_313@3x.png */,
+				D40971D81B31FB7B0049ACFC /* noun_error_89100@2x.png */,
+				D40971D91B31FB7B0049ACFC /* noun_error_89100@3x.png */,
 				D40971D21B31F2D20049ACFC /* noun_cd_160278.png */,
 				D40971D41B31F3190049ACFC /* noun_cinema_313.png */,
 				D4E37DD41B2FD1AE005B5DC6 /* noun_warning_20435.png */,
@@ -262,7 +274,11 @@
 				D4B7C1B91B2F43D700D77F5E /* noun_alert_15437.png in Resources */,
 				D47B7E9F1B2D8408008F1FD8 /* LaunchScreen.xib in Resources */,
 				D47B7E9C1B2D8408008F1FD8 /* Images.xcassets in Resources */,
+				D40971DC1B31FB7B0049ACFC /* noun_error_89100@2x.png in Resources */,
+				D40971DA1B31FB7B0049ACFC /* noun_cinema_313@2x.png in Resources */,
+				D40971DB1B31FB7B0049ACFC /* noun_cinema_313@3x.png in Resources */,
 				D4E37DD51B2FD1AE005B5DC6 /* noun_warning_20435.png in Resources */,
+				D40971DD1B31FB7B0049ACFC /* noun_error_89100@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
