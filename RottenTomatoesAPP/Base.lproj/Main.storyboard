@@ -88,7 +88,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="22" sectionFooterHeight="22" id="rPI-99-gh9">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="516"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -145,6 +145,15 @@
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
+                            <tabBar contentMode="scaleToFill" id="LQH-oc-NoC">
+                                <rect key="frame" x="0.0" y="516" width="320" height="49"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <items>
+                                    <tabBarItem title="Office Box " image="noun_cinema_313.png" id="HC8-hn-Rgk"/>
+                                    <tabBarItem title="Top Rentals" image="noun_cd_160278.png" id="Ar6-AL-Gz0"/>
+                                </items>
+                            </tabBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -152,12 +161,13 @@
                     <connections>
                         <outlet property="ErrorLabel" destination="MBL-qi-MZa" id="M2s-Wl-iCE"/>
                         <outlet property="errorView" destination="0qR-Pg-wB1" id="VGW-bx-UgD"/>
+                        <outlet property="tabBar" destination="LQH-oc-NoC" id="ya9-pl-ae6"/>
                         <outlet property="tableView" destination="rPI-99-gh9" id="KeK-1B-gAe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7lC-gu-BU5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="451" y="463"/>
+            <point key="canvasLocation" x="983" y="487"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="ufC-wZ-h7g">
@@ -212,7 +222,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="912" y="463"/>
+            <point key="canvasLocation" x="1444" y="487"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="oan-h9-9EF">
@@ -232,10 +242,11 @@
             </objects>
             <point key="canvasLocation" x="17" y="-180"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Item-->
         <scene sceneID="mjR-8Z-1hY">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4PR-pF-dcz" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="8hc-Dc-jd4"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="CYc-mi-sBT">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -248,10 +259,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r4z-Wh-sSy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="17" y="463"/>
+            <point key="canvasLocation" x="549" y="487"/>
         </scene>
     </scenes>
     <resources>
+        <image name="noun_cd_160278.png" width="22" height="22"/>
+        <image name="noun_cinema_313.png" width="22" height="22"/>
         <image name="noun_error_89100.png" width="300" height="300"/>
         <image name="noun_warning_20435.png" width="300" height="300"/>
     </resources>

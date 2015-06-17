@@ -10,7 +10,7 @@
 
 @interface RottenTomatoesUtil : NSObject
 
-+ (void)callMoviesAPIWithType: (NSString *)type limit: (NSInteger)limit onComplete:(void (^)(NSData *data, NSError *error))completionHandler;
++ (void)callAPIWithType: (NSString *)type subtype: (NSString *)subtype limit: (NSInteger)limit onComplete:(void (^)(NSData *data, NSError *error))completionHandler;
 
 +(NSString *)hiResImageUrl: (NSString *) resizedImgUrl;
 @end

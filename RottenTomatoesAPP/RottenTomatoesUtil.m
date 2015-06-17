@@ -11,10 +11,10 @@
 @implementation RottenTomatoesUtil
 
 
-+ (void)callMoviesAPIWithType: (NSString *)type limit: (NSInteger)limit onComplete:(void (^)(NSData *data, NSError *error))completionHandler {
++ (void)callAPIWithType: (NSString *)type subtype:(NSString *)subtype limit: (NSInteger)limit onComplete:(void (^)(NSData *data, NSError *error))completionHandler {
     // type box_office
 
-    NSString *urlString = [NSString stringWithFormat:@"http://api.rottentomatoes.com/api/public/v1.0/lists/movies/%@.json?limit=%ld&country=us&apikey=dagqdghwaq3e3mxyrp7kmmj5", type, limit];
+    NSString *urlString = [NSString stringWithFormat:@"http://api.rottentomatoes.com/api/public/v1.0/lists/%@/%@.json?limit=%ld&country=us&apikey=dagqdghwaq3e3mxyrp7kmmj5", type, subtype, limit];
 
     NSURLRequest *request = [NSURLRequest requestWithURL: [NSURL URLWithString:urlString]];
     NSOperationQueue *queue = [[NSOperationQueue alloc] init];

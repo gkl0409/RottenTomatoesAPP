@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "RottenTomatoesUtil.h"
 
-@interface ListViewController : UIViewController<UITableViewDataSource, UITableViewDelegate>
+@interface ListViewController : UIViewController<UITableViewDataSource, UITableViewDelegate, UITabBarDelegate>
 
 @property (nonatomic,retain) IBOutlet UITableView *tableView;
 @property (nonatomic,retain) UIRefreshControl *

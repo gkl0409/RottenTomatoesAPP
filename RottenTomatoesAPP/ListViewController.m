@@ -14,9 +14,12 @@
 
 @interface ListViewController ()
 
+@property (weak, nonatomic) IBOutlet UITabBar *tabBar;
 @property (weak, nonatomic) IBOutlet UILabel *ErrorLabel;
 @property (weak, nonatomic) IBOutlet UIView *errorView;
 @property (nonatomic, strong) NSDictionary *retJson;
+@property (nonatomic, strong) NSString *dataType;
+@property (nonatomic, strong) NSString *dataSubtype;
 
 // aready define in tableViewController
 //@property (nonatomic, weak) IBOutlet UITableView *tableView;
@@ -31,16 +34,21 @@
     // Do any additional setup after loading the view.
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
+    self.tabBar.delegate = self;
+    [self.tabBar setSelectedItem: self.tabBar.items[0]];
     self.refreshControl = [[UIRefreshControl alloc] init];
+    self.refreshControl.attributedTitle = [[NSAttributedString alloc] initWithString:@"Pull to Refresh"];
     [self.refreshControl addTarget:self action:@selector(refreshData) forControlEvents:UIControlEventValueChanged];
     [self.tableView insertSubview:self.refreshControl atIndex:0];
     self.retJson = @{@"movies": @[]};
+    self.dataType = @"movies";
+    self.dataSubtype = @"box_office";
     [self refreshData];
 }
 
-- (void) refreshData {
+- (void) refreshData{
     [SVProgressHUD showInfoWithStatus:@"Loading..." maskType:SVProgressHUDMaskTypeBlack];
-    [RottenTomatoesUtil callMoviesAPIWithType:@"box_office" limit:20 onComplete: ^(NSData* data, NSError *error){
+    [RottenTomatoesUtil callAPIWithType:self.dataType subtype:self.dataSubtype limit:20 onComplete: ^(NSData* data, NSError *error){
         if (data != nil) {
             NSLog(@"%@", [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]);
             
@@ -54,10 +62,10 @@
                 [self.tableView reloadData];
             }
             [SVProgressHUD dismiss];
+            [self.refreshControl endRefreshing];
         });
     }];
 
-    [self.refreshControl endRefreshing];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -83,6 +91,21 @@
             [self.errorView setHidden: YES];
         }];
     }];
+}
+
+#pragma mark - UITabBarDelegate
+- (void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item {
+    NSInteger barItemIdx = [tabBar.items indexOfObject:item];
+    if (barItemIdx == 0) {
+        self.navigationItem.title = @"Box Office";
+        self.dataType = @"movies";
+        self.dataSubtype = @"box_office";
+    } else if (barItemIdx == 1){
+        self.navigationItem.title = @"Top Rentals";
+        self.dataType = @"dvds";
+        self.dataSubtype = @"top_rentals";
+    }
+    [self refreshData];
 }
 
 #pragma mark - UITableViewDataSource
